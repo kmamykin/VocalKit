@@ -89,14 +89,14 @@
 																			ofType:@"conf"
 																	   inDirectory:@"model"]];
 
-	[vk setConfigString:[[NSBundle mainBundle] pathForResource:@"cmu07a"
+	[vk setConfigString:[[NSBundle mainBundle] pathForResource:@"groceries"
 														ofType:@"dic"
-												   inDirectory:@"model/lm/en_US"]
+												   inDirectory:@"model/lm/groceries"]
 				 forKey:@"-dict"];
 
-	[vk setConfigString:[[NSBundle mainBundle] pathForResource:@"wsj0vp.5000"
-														ofType:@"DMP"
-												   inDirectory:@"model/lm/en_US"]
+	[vk setConfigString:[[NSBundle mainBundle] pathForResource:@"groceries"
+														ofType:@"lm"
+												   inDirectory:@"model/lm/groceries"]
 				 forKey:@"-lm"];
 	
 	
