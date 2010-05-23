@@ -6,6 +6,7 @@
 //  Copyright __MyCompanyName__ 2010. All rights reserved.
 //
 
+#import "HomeViewController.h"
 #import "VocalKitTestAppDelegate.h"
 #import "VocalKitTestViewController.h"
 
@@ -13,17 +14,17 @@
 
 @synthesize window;
 @synthesize viewController;
-
+@synthesize navController;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {    
-    
-    // Override point for customization after app launch    
-    [window addSubview:viewController.view];
-    [window makeKeyAndVisible];
+  // Override point for customization after app launch
+  HomeViewController *controller = [[HomeViewController alloc] initWithNibName:@"HomeViewController" bundle:nil];
+  
+  [window addSubview:controller.view];
+  [window makeKeyAndVisible];
 	
 	return YES;
 }
-
 
 - (void)dealloc {
     [viewController release];

@@ -6,8 +6,12 @@
 //  Copyright __MyCompanyName__ 2010. All rights reserved.
 //
 
+#import "GroceryListViewController.h"
+#import "ServerRequest.h"
+#import "SBJSON.h"
 #import "VocalKitTestViewController.h"
 #import "VKFliteSpeaker.h"
+
 @implementation VocalKitTestViewController
 @synthesize audioPlayer;
 
@@ -23,12 +27,11 @@
 	}
 }
 
-- (IBAction) speakPressed:(id)sender {
-	
+/*
+- (IBAction) speakPressed:(id)sender {	
 	NSString *file = [NSString stringWithFormat:@"%@/test.wav", 
 					  [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject]];
 					  
-
 	NSLog(@"Speakers = %@", [vkSpeaker speakers]);
 	[vkSpeaker speakText:textView.text toFile:file];
 
@@ -40,14 +43,55 @@
     audioPlayer.numberOfLoops = 0;
 	
 	[audioPlayer play];
-	
 }
-- (void)awakeFromNib
-{		
+*/
+
+- (IBAction) rejectPressed:(id)sender {
+  [groceries removeLastObject];
+  [textView setText:[groceries componentsJoinedByString:@"\n"]];
+}
+
+- (IBAction) donePressed:(id)sender {
+  [textView resignFirstResponder];
+}
+
+- (IBAction) postPressed:(id)sender {
+  // Send groceries list to server
+  NSString *data = [groceries componentsJoinedByString:@","];
+  ServerRequest *request = [[ServerRequest alloc] init];
+  [request post:data delegate:self
+   requestSelector:@selector(postCallback:)
+     errorSelector:@selector(errorCallback:)];
+  [request release];
+  [loading startAnimating];
+}
+
+- (void)postCallback:(NSData *)data {
+  NSString *response = [[NSString alloc] initWithData:data encoding:NSASCIIStringEncoding];
+  NSLog(@"postCallback %@", response);
+  [response release];
+  [groceries removeAllObjects];
+  [textView setText:@""];
+  [loading stopAnimating];
+}
+
+- (void)errorCallback:(NSString *)message {
+  NSLog(@"errorCallback %@", message);
+  textView.text = message;
+  [loading stopAnimating];
+}
+
+- (IBAction) listPressed:(id)sender {
+  GroceryListViewController *controller =
+    [[GroceryListViewController alloc] initWithNibName:@"GroceryListViewController" bundle:nil];
+  [self presentModalViewController:controller animated:YES]; 
+}
+
+- (void)awakeFromNib {		
 	// Allocate our singleton instance for the recorder & player object
 	
 	OSStatus error = AudioSessionInitialize(NULL, NULL, NULL, self);
-	if (error) printf("ERROR INITIALIZING AUDIO SESSION! %d\n", error);
+	if (error) printf("ERROR INITIALIZING AUDIO SESSION! %i\n", (int)error);
 	else 
 	{
 		UInt32 category = kAudioSessionCategory_PlayAndRecord;	
@@ -59,7 +103,7 @@
 
 		// we do not want to allow recording if input is not available
 		error = AudioSessionGetProperty(kAudioSessionProperty_AudioInputAvailable, &size, &inputAvailable);
-		if (error) printf("ERROR GETTING INPUT AVAILABILITY! %d\n", error);
+		if (error) printf("ERROR GETTING INPUT AVAILABILITY! %i\n", (int)error);
 		if (!inputAvailable) {
 			NSLog(@"No Input Available!");
 		}
@@ -68,7 +112,7 @@
 		if (error) printf("AudioSessionSetActive (true) failed");
 	}
 
-	UIColor *bgColor = [[UIColor alloc] initWithRed:.39 green:.44 blue:.57 alpha:.5];
+	//UIColor *bgColor = [[UIColor alloc] initWithRed:.39 green:.44 blue:.57 alpha:.5];
 }
 
 #pragma mark  Notification updates
@@ -76,10 +120,23 @@
 	NSDictionary *dict = [notification userInfo];
 
 	NSString *phrase = [dict objectForKey:VKRecognizedPhraseNotificationTextKey];
-	
-	[textView setText:phrase];
-	
+
+  if ([phrase isEqualToString:@""]) {
+    return;
+  }
+  if ([phrase length] > 4 &&
+      [[phrase substringToIndex:4] isEqualToString:@"BUY "]) {
+    phrase = [phrase substringFromIndex:4];
+  }
+  NSLog(@"adding phrase %@", phrase);
+  [groceries addObject:[phrase lowercaseString]]; // add to list
+  
+  [textView setText:[groceries componentsJoinedByString:@"\n"]];
+  [rejectButton setHidden:NO];
+  [postButton setHidden:NO];
+	//[textView setText:phrase];  
 }
+
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -89,12 +146,12 @@
 																			ofType:@"conf"
 																	   inDirectory:@"model"]];
 
-	[vk setConfigString:[[NSBundle mainBundle] pathForResource:@"groceries"
+	[vk setConfigString:[[NSBundle mainBundle] pathForResource:@"commands"
 														ofType:@"dic"
 												   inDirectory:@"model/lm/groceries"]
 				 forKey:@"-dict"];
 
-	[vk setConfigString:[[NSBundle mainBundle] pathForResource:@"groceries"
+	[vk setConfigString:[[NSBundle mainBundle] pathForResource:@"commands"
 														ofType:@"lm"
 												   inDirectory:@"model/lm/groceries"]
 				 forKey:@"-lm"];
@@ -111,9 +168,36 @@
 			  object:nil];
 	
 	vkSpeaker = [[VKFliteSpeaker alloc] init];
+  
+  [self.navigationController.navigationBar addSubview:loading];
+  [loading startAnimating];
+  
+  groceries = [[NSMutableArray alloc] init];
+  [rejectButton setHidden:YES];
+  [postButton setHidden:YES];
+  [loading setHidden:YES];
+  [self.view bringSubviewToFront:loading];
+  [textView resignFirstResponder];
+
+  NSLog(@"my number %@", [[NSUserDefaults standardUserDefaults] objectForKey:@"SBFormattedPhoneNumber"]);
 }
 
+- (BOOL)textView:(UITextView *)t shouldChangeTextInRange:(NSRange)range replacementText:(NSString *)text {  
+  if([text isEqualToString:@"\n"]) {
+    [t resignFirstResponder];
+    return NO;
+  }
+  return YES;
+}
 
+- (BOOL)textViewShouldEndEditing:(UITextView *)t {
+  [t resignFirstResponder];
+  return TRUE;
+}
+
+- (void)textViewDidEndEditing:(UITextView *)t {
+  [t resignFirstResponder];
+}
 
 /*
 // Override to allow orientations other than the default portrait orientation.
@@ -137,7 +221,9 @@
 
 
 - (void)dealloc {
-    [super dealloc];
+  [vkSpeaker release];
+  [groceries release];
+  [super dealloc];
 }
 
 @end

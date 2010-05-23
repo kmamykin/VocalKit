@@ -13,10 +13,12 @@
 @interface VocalKitTestAppDelegate : NSObject <UIApplicationDelegate> {
     UIWindow *window;
     VocalKitTestViewController *viewController;
+    UINavigationController *navController;
 }
 
 @property (nonatomic, retain) IBOutlet UIWindow *window;
 @property (nonatomic, retain) IBOutlet VocalKitTestViewController *viewController;
+@property (nonatomic, retain) IBOutlet UINavigationController *navController;
 
 @end
 

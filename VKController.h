@@ -41,6 +41,7 @@ extern NSString * const VKRecognizedPhraseNotificationScoreKey;
 - (void) startListening;
 - (void) stopListening;
 - (BOOL) isListening;
+- (void) showListened;
 - (void) postNotificationOfRecognizedText;
 
 - (void) setConfigString:(NSString*)str forKey:(NSString*)key;
