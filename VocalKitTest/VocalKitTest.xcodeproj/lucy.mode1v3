@@ -286,7 +286,7 @@
 								</array>
 							</array>
 							<key>PBXSmartGroupTreeModuleOutlineStateVisibleRectKey</key>
-							<string>{{0, 57}, {277, 660}}</string>
+							<string>{{0, 43}, {277, 660}}</string>
 						</dict>
 						<key>PBXTopSmartGroupGIDs</key>
 						<array/>
@@ -335,7 +335,7 @@
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>8D11690D11A94C3A0017FEC1</string>
+										<string>8D11693211A9617C0017FEC1</string>
 										<key>history</key>
 										<array>
 											<string>8D0B1B1A11A859DC0005822D</string>
@@ -366,8 +366,8 @@
 											<string>8D1168C111A940CF0017FEC1</string>
 											<string>8D1168D011A941BC0017FEC1</string>
 											<string>8D1168D111A941BC0017FEC1</string>
-											<string>8D1168F811A948F90017FEC1</string>
-											<string>8D11690911A94C240017FEC1</string>
+											<string>8D11692B11A961130017FEC1</string>
+											<string>8D11692C11A961130017FEC1</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>

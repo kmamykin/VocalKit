@@ -21,7 +21,6 @@
   IBOutlet UIButton *recordButton;
   IBOutlet UIButton *undoButton;
   IBOutlet UIBarItem *settingsButton;
-  IBOutlet UIBarItem *backButton;
   IBOutlet UITextView *moreText;
   IBOutlet UILabel *listening;
   IBOutlet UIActivityIndicatorView *loading;
@@ -39,7 +38,6 @@
 - (IBAction)recordPressed:(id)sender;
 - (IBAction)undoPressed:(id)sender;
 - (IBAction)settingsPressed:(id)sender;
-- (IBAction)backPressed:(id)sender;
 
 - (void)addCommand:(NSString *)command;
 - (void)removeCommand:(NSString *)command;

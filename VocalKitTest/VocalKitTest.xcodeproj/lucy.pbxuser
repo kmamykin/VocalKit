@@ -39,7 +39,7 @@
 	29B97313FDCFA39411CA2CEA /* Project object */ = {
 		activeBuildConfigurationName = Debug;
 		activeExecutable = 8DE7B2FA11A84C580026A68F /* VocalKitTest */;
-		activeSDKPreference = iphoneos3.1.3;
+		activeSDKPreference = iphonesimulator3.1.3;
 		activeTarget = 1D6058900D05DD3D006BFB54 /* VocalKitTest */;
 		addToTargets = (
 			1D6058900D05DD3D006BFB54 /* VocalKitTest */,
@@ -122,6 +122,10 @@
 			8D11690911A94C240017FEC1 /* PBXTextBookmark */ = 8D11690911A94C240017FEC1 /* PBXTextBookmark */;
 			8D11690A11A94C240017FEC1 /* PBXTextBookmark */ = 8D11690A11A94C240017FEC1 /* PBXTextBookmark */;
 			8D11690D11A94C3A0017FEC1 /* PBXTextBookmark */ = 8D11690D11A94C3A0017FEC1 /* PBXTextBookmark */;
+			8D11692B11A961130017FEC1 /* PBXTextBookmark */ = 8D11692B11A961130017FEC1 /* PBXTextBookmark */;
+			8D11692C11A961130017FEC1 /* PBXTextBookmark */ = 8D11692C11A961130017FEC1 /* PBXTextBookmark */;
+			8D11692D11A961130017FEC1 /* PBXTextBookmark */ = 8D11692D11A961130017FEC1 /* PBXTextBookmark */;
+			8D11693211A9617C0017FEC1 /* PBXTextBookmark */ = 8D11693211A9617C0017FEC1 /* PBXTextBookmark */;
 			8D9FD66011A914CE0077D396 = 8D9FD66011A914CE0077D396 /* PBXTextBookmark */;
 			8D9FD66211A914CE0077D396 = 8D9FD66211A914CE0077D396 /* PBXTextBookmark */;
 			8D9FD66411A914CE0077D396 = 8D9FD66411A914CE0077D396 /* PBXTextBookmark */;
@@ -200,7 +204,7 @@
 		fRef = 8DE52EEB11A8B77B007BD4A2 /* HomeViewController.m */;
 		name = "HomeViewController.m: 239";
 		rLen = 0;
-		rLoc = 8069;
+		rLoc = 8148;
 		rType = 0;
 		vrLen = 713;
 		vrLoc = 7146;
@@ -260,7 +264,7 @@
 		fRef = 8DE52EEB11A8B77B007BD4A2 /* HomeViewController.m */;
 		name = "HomeViewController.m: 96";
 		rLen = 0;
-		rLoc = 3112;
+		rLoc = 3225;
 		rType = 0;
 		vrLen = 786;
 		vrLoc = 2425;
@@ -270,7 +274,7 @@
 		fRef = 8DE52EEA11A8B77B007BD4A2 /* HomeViewController.h */;
 		name = "HomeViewController.h: 42";
 		rLen = 0;
-		rLoc = 1140;
+		rLoc = 1071;
 		rType = 0;
 		vrLen = 637;
 		vrLoc = 848;
@@ -280,7 +284,7 @@
 		fRef = 8DE52EEB11A8B77B007BD4A2 /* HomeViewController.m */;
 		name = "HomeViewController.m: 96";
 		rLen = 0;
-		rLoc = 3112;
+		rLoc = 3225;
 		rType = 0;
 		vrLen = 786;
 		vrLoc = 2425;
@@ -290,7 +294,7 @@
 		fRef = 8DE52EEB11A8B77B007BD4A2 /* HomeViewController.m */;
 		name = "HomeViewController.m: 71";
 		rLen = 0;
-		rLoc = 2105;
+		rLoc = 2041;
 		rType = 0;
 		vrLen = 533;
 		vrLoc = 1667;
@@ -300,7 +304,7 @@
 		fRef = 8DE52EEB11A8B77B007BD4A2 /* HomeViewController.m */;
 		name = "HomeViewController.m: 71";
 		rLen = 0;
-		rLoc = 2105;
+		rLoc = 2041;
 		rType = 0;
 		vrLen = 579;
 		vrLoc = 1667;
@@ -310,7 +314,7 @@
 		fRef = 8DE52EEB11A8B77B007BD4A2 /* HomeViewController.m */;
 		name = "HomeViewController.m: 80";
 		rLen = 0;
-		rLoc = 2256;
+		rLoc = 2192;
 		rType = 0;
 		vrLen = 720;
 		vrLoc = 1813;
@@ -320,7 +324,7 @@
 		fRef = 8DE52EEB11A8B77B007BD4A2 /* HomeViewController.m */;
 		name = "HomeViewController.m: 116";
 		rLen = 0;
-		rLoc = 3516;
+		rLoc = 3629;
 		rType = 0;
 		vrLen = 875;
 		vrLoc = 2533;
@@ -330,7 +334,7 @@
 		fRef = 8DE52EEB11A8B77B007BD4A2 /* HomeViewController.m */;
 		name = "HomeViewController.m: 110";
 		rLen = 0;
-		rLoc = 3302;
+		rLoc = 3415;
 		rType = 0;
 		vrLen = 934;
 		vrLoc = 2533;
@@ -350,7 +354,7 @@
 		fRef = 8DE52EEB11A8B77B007BD4A2 /* HomeViewController.m */;
 		name = "HomeViewController.m: 160";
 		rLen = 13;
-		rLoc = 4816;
+		rLoc = 4874;
 		rType = 0;
 		vrLen = 864;
 		vrLoc = 4227;
@@ -360,7 +364,7 @@
 		fRef = 8DE52EEB11A8B77B007BD4A2 /* HomeViewController.m */;
 		name = "HomeViewController.m: 349";
 		rLen = 0;
-		rLoc = 11454;
+		rLoc = 11533;
 		rType = 0;
 		vrLen = 834;
 		vrLoc = 10393;
@@ -370,7 +374,7 @@
 		fRef = 8DE52EEB11A8B77B007BD4A2 /* HomeViewController.m */;
 		name = "HomeViewController.m: 349";
 		rLen = 0;
-		rLoc = 11429;
+		rLoc = 11508;
 		rType = 0;
 		vrLen = 735;
 		vrLoc = 10542;
@@ -380,7 +384,7 @@
 		fRef = 8DE52EEB11A8B77B007BD4A2 /* HomeViewController.m */;
 		name = "HomeViewController.m: 352";
 		rLen = 0;
-		rLoc = 11459;
+		rLoc = 11538;
 		rType = 0;
 		vrLen = 737;
 		vrLoc = 10576;
@@ -390,7 +394,7 @@
 		fRef = 8DE52EEB11A8B77B007BD4A2 /* HomeViewController.m */;
 		name = "HomeViewController.m: 207";
 		rLen = 0;
-		rLoc = 6474;
+		rLoc = 6553;
 		rType = 0;
 		vrLen = 704;
 		vrLoc = 5828;
@@ -400,7 +404,7 @@
 		fRef = 8DE52EEB11A8B77B007BD4A2 /* HomeViewController.m */;
 		name = "HomeViewController.m: 212";
 		rLen = 0;
-		rLoc = 6554;
+		rLoc = 6633;
 		rType = 0;
 		vrLen = 849;
 		vrLoc = 6136;
@@ -410,7 +414,7 @@
 		fRef = 8DE52EEB11A8B77B007BD4A2 /* HomeViewController.m */;
 		name = "HomeViewController.m: 212";
 		rLen = 0;
-		rLoc = 6554;
+		rLoc = 6633;
 		rType = 0;
 		vrLen = 849;
 		vrLoc = 6136;
@@ -434,6 +438,46 @@
 		rType = 0;
 		vrLen = 513;
 		vrLoc = 1340;
+	};
+	8D11692B11A961130017FEC1 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 8DE52EEA11A8B77B007BD4A2 /* HomeViewController.h */;
+		name = "HomeViewController.h: 41";
+		rLen = 0;
+		rLoc = 1071;
+		rType = 0;
+		vrLen = 544;
+		vrLoc = 894;
+	};
+	8D11692C11A961130017FEC1 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 8DE52EEB11A8B77B007BD4A2 /* HomeViewController.m */;
+		name = "HomeViewController.m: 72";
+		rLen = 0;
+		rLoc = 1854;
+		rType = 0;
+		vrLen = 716;
+		vrLoc = 1774;
+	};
+	8D11692D11A961130017FEC1 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 8DE52EEB11A8B77B007BD4A2 /* HomeViewController.m */;
+		name = "HomeViewController.m: 106";
+		rLen = 0;
+		rLoc = 3048;
+		rType = 0;
+		vrLen = 843;
+		vrLoc = 2728;
+	};
+	8D11693211A9617C0017FEC1 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 8DE52EEB11A8B77B007BD4A2 /* HomeViewController.m */;
+		name = "HomeViewController.m: 127";
+		rLen = 0;
+		rLoc = 3630;
+		rType = 0;
+		vrLen = 681;
+		vrLoc = 3299;
 	};
 	8D9FD66011A914CE0077D396 /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
@@ -614,7 +658,7 @@
 		fRef = 8DE52EEB11A8B77B007BD4A2 /* HomeViewController.m */;
 		name = "HomeViewController.m: 239";
 		rLen = 0;
-		rLoc = 8069;
+		rLoc = 8148;
 		rType = 0;
 		vrLen = 495;
 		vrLoc = 7170;
@@ -654,7 +698,7 @@
 		fRef = 8DE52EEA11A8B77B007BD4A2 /* HomeViewController.h */;
 		name = "HomeViewController.h: 53";
 		rLen = 0;
-		rLoc = 1501;
+		rLoc = 1431;
 		rType = 0;
 		vrLen = 482;
 		vrLoc = 933;
@@ -664,7 +708,7 @@
 		fRef = 8DE52EEB11A8B77B007BD4A2 /* HomeViewController.m */;
 		name = "HomeViewController.m: 239";
 		rLen = 0;
-		rLoc = 8069;
+		rLoc = 8148;
 		rType = 0;
 		vrLen = 688;
 		vrLoc = 7170;
@@ -686,16 +730,16 @@
 	};
 	8DE52EEA11A8B77B007BD4A2 /* HomeViewController.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {948, 944}}";
-			sepNavSelRange = "{528, 0}";
-			sepNavVisRange = "{258, 732}";
+			sepNavIntBoundsRect = "{{0, 0}, {948, 896}}";
+			sepNavSelRange = "{1071, 0}";
+			sepNavVisRange = "{894, 544}";
 		};
 	};
 	8DE52EEB11A8B77B007BD4A2 /* HomeViewController.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {920, 5936}}";
-			sepNavSelRange = "{1666, 0}";
-			sepNavVisRange = "{1340, 513}";
+			sepNavIntBoundsRect = "{{0, 0}, {920, 5856}}";
+			sepNavSelRange = "{3630, 0}";
+			sepNavVisRange = "{3299, 681}";
 			sepNavWindowFrame = "{{15, 21}, {1192, 752}}";
 		};
 	};

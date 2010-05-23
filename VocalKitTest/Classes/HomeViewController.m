@@ -69,10 +69,6 @@
   
 }
 
-- (IBAction)backPressed:(id)sender {
-  [self showCommands]; 
-}
-
 - (void)showCommands {
   [moreText setHidden:YES];
   [commandsTable setHidden:NO];
@@ -97,6 +93,9 @@
 }
 
 - (void)addCommandCallback:(NSData *)data {
+  [loading stopAnimating];
+  [loading setHidden:YES];
+
   NSString *response = [[NSString alloc] initWithData:data encoding:NSASCIIStringEncoding];
   NSLog(@"addCommandCallback %@", response);
   
@@ -105,6 +104,11 @@
   [response release];
 
   NSLog(@"json result %@", result);
+  NSString *error = [result valueForKey:@"error"];
+  if (error != nil) {
+    [self speakCommand:@"oops"];
+    return;
+  }
   NSString *commandType = [result valueForKey:@"command"];
   NSString *message = [result valueForKey:@"message"];
   if ([commandType isEqualToString:kWeatherCommandType]) {
@@ -120,9 +124,6 @@
       [self showCommands];
     }
   }
-
-  [loading stopAnimating];
-  [loading setHidden:YES];
 }
 
 - (void)removeCommand:(NSString *)command {
@@ -208,7 +209,7 @@
   // HACK: hardcode zipcode
   if ([command isEqualToString:kWeatherCommandType]) {
     command = [command stringByAppendingString:@" 10002"];
-  } else if ([command isEqualToString:kBuyCommandType]) {
+  } else if ([[command substringToIndex:3] isEqualToString:kBuyCommandType]) {
     [self speakCommand:command];
   }
   
