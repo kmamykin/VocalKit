@@ -12,7 +12,7 @@
 		</object>
 		<object class="NSMutableArray" key="IBDocument.EditedObjectIDs">
 			<bool key="EncodedWithXMLCoder">YES</bool>
-			<integer value="4"/>
+			<integer value="1"/>
 		</object>
 		<object class="NSArray" key="IBDocument.PluginDependencies">
 			<bool key="EncodedWithXMLCoder">YES</bool>
@@ -71,11 +71,17 @@
 						<reference key="NSSuperview" ref="191373211"/>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 						<int key="IBUIBarStyle">2</int>
-						<object class="NSArray" key="IBUIItems">
+						<object class="NSMutableArray" key="IBUIItems">
 							<bool key="EncodedWithXMLCoder">YES</bool>
 							<object class="IBUINavigationItem" id="508086621">
 								<reference key="IBUINavigationBar" ref="778575938"/>
 								<string key="IBUITitle">Home Dictator</string>
+								<object class="IBUIBarButtonItem" key="IBUILeftBarButtonItem" id="614255915">
+									<string key="IBUITitle">Back</string>
+									<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
+									<int key="IBUIStyle">1</int>
+									<reference key="IBUINavigationItem" ref="508086621"/>
+								</object>
 								<object class="IBUIBarButtonItem" key="IBUIRightBarButtonItem" id="42548722">
 									<object class="NSCustomResource" key="IBUIImage">
 										<string key="NSClassName">NSImage</string>
@@ -128,7 +134,7 @@
 					<object class="IBUIButton" id="815955232">
 						<reference key="NSNextResponder" ref="191373211"/>
 						<int key="NSvFlags">292</int>
-						<string key="NSFrame">{{37, 429}, {40, 40}}</string>
+						<string key="NSFrame">{{37, 434}, {32, 32}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
 						<bool key="IBUIOpaque">NO</bool>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
@@ -141,13 +147,8 @@
 							<bytes key="NSRGB">MC4xOTYwNzg0MzQ2IDAuMzA5ODAzOTMyOSAwLjUyMTU2ODY1NgA</bytes>
 						</object>
 						<reference key="IBUINormalTitleShadowColor" ref="1044729599"/>
-						<object class="NSCustomResource" key="IBUIHighlightedBackgroundImage" id="388390544">
-							<string key="NSClassName">NSImage</string>
-							<string key="NSResourceName">refresh_48.png</string>
-						</object>
-						<reference key="IBUINormalBackgroundImage" ref="388390544"/>
 					</object>
-					<object class="IBUIActivityIndicatorView" id="898318770">
+					<object class="IBUIActivityIndicatorView" id="972166527">
 						<reference key="NSNextResponder" ref="191373211"/>
 						<int key="NSvFlags">292</int>
 						<string key="NSFrame">{{288, 439}, {20, 20}}</string>
@@ -157,7 +158,7 @@
 						<bool key="IBUIHidesWhenStopped">NO</bool>
 						<int key="IBUIStyle">2</int>
 					</object>
-					<object class="IBUILabel" id="80608046">
+					<object class="IBUILabel" id="735319552">
 						<reference key="NSNextResponder" ref="191373211"/>
 						<int key="NSvFlags">292</int>
 						<string key="NSFrame">{{110, 439}, {83, 21}}</string>
@@ -176,7 +177,7 @@
 						<int key="IBUIBaselineAdjustment">1</int>
 						<float key="IBUIMinimumFontSize">10</float>
 					</object>
-					<object class="IBUITextView" id="703737443">
+					<object class="IBUITextView" id="496105929">
 						<reference key="NSNextResponder" ref="191373211"/>
 						<int key="NSvFlags">292</int>
 						<string key="NSFrame">{{20, 62}, {280, 344}}</string>
@@ -271,7 +272,7 @@
 					<object class="IBCocoaTouchOutletConnection" key="connection">
 						<string key="label">loading</string>
 						<reference key="source" ref="372490531"/>
-						<reference key="destination" ref="898318770"/>
+						<reference key="destination" ref="972166527"/>
 					</object>
 					<int key="connectionID">20</int>
 				</object>
@@ -287,7 +288,7 @@
 					<object class="IBCocoaTouchOutletConnection" key="connection">
 						<string key="label">listening</string>
 						<reference key="source" ref="372490531"/>
-						<reference key="destination" ref="80608046"/>
+						<reference key="destination" ref="735319552"/>
 					</object>
 					<int key="connectionID">24</int>
 				</object>
@@ -295,9 +296,25 @@
 					<object class="IBCocoaTouchOutletConnection" key="connection">
 						<string key="label">moreText</string>
 						<reference key="source" ref="372490531"/>
-						<reference key="destination" ref="703737443"/>
+						<reference key="destination" ref="496105929"/>
 					</object>
 					<int key="connectionID">27</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchOutletConnection" key="connection">
+						<string key="label">backButton</string>
+						<reference key="source" ref="372490531"/>
+						<reference key="destination" ref="614255915"/>
+					</object>
+					<int key="connectionID">30</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchEventConnection" key="connection">
+						<string key="label">backPressed:</string>
+						<reference key="source" ref="614255915"/>
+						<reference key="destination" ref="372490531"/>
+					</object>
+					<int key="connectionID">31</int>
 				</object>
 			</object>
 			<object class="IBMutableOrderedSet" key="objectRecords">
@@ -318,9 +335,9 @@
 							<reference ref="812640656"/>
 							<reference ref="815955232"/>
 							<reference ref="252875558"/>
-							<reference ref="898318770"/>
-							<reference ref="80608046"/>
-							<reference ref="703737443"/>
+							<reference ref="972166527"/>
+							<reference ref="735319552"/>
+							<reference ref="496105929"/>
 						</object>
 						<reference key="parent" ref="0"/>
 					</object>
@@ -345,15 +362,6 @@
 						<reference key="parent" ref="191373211"/>
 					</object>
 					<object class="IBObjectRecord">
-						<int key="objectID">5</int>
-						<reference key="object" ref="508086621"/>
-						<object class="NSMutableArray" key="children">
-							<bool key="EncodedWithXMLCoder">YES</bool>
-							<reference ref="42548722"/>
-						</object>
-						<reference key="parent" ref="778575938"/>
-					</object>
-					<object class="IBObjectRecord">
 						<int key="objectID">6</int>
 						<reference key="object" ref="812640656"/>
 						<reference key="parent" ref="191373211"/>
@@ -369,24 +377,39 @@
 						<reference key="parent" ref="191373211"/>
 					</object>
 					<object class="IBObjectRecord">
+						<int key="objectID">18</int>
+						<reference key="object" ref="972166527"/>
+						<reference key="parent" ref="191373211"/>
+					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">23</int>
+						<reference key="object" ref="735319552"/>
+						<reference key="parent" ref="191373211"/>
+					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">25</int>
+						<reference key="object" ref="496105929"/>
+						<reference key="parent" ref="191373211"/>
+					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">5</int>
+						<reference key="object" ref="508086621"/>
+						<object class="NSMutableArray" key="children">
+							<bool key="EncodedWithXMLCoder">YES</bool>
+							<reference ref="42548722"/>
+							<reference ref="614255915"/>
+						</object>
+						<reference key="parent" ref="778575938"/>
+					</object>
+					<object class="IBObjectRecord">
 						<int key="objectID">17</int>
 						<reference key="object" ref="42548722"/>
 						<reference key="parent" ref="508086621"/>
 					</object>
 					<object class="IBObjectRecord">
-						<int key="objectID">18</int>
-						<reference key="object" ref="898318770"/>
-						<reference key="parent" ref="191373211"/>
-					</object>
-					<object class="IBObjectRecord">
-						<int key="objectID">23</int>
-						<reference key="object" ref="80608046"/>
-						<reference key="parent" ref="191373211"/>
-					</object>
-					<object class="IBObjectRecord">
-						<int key="objectID">25</int>
-						<reference key="object" ref="703737443"/>
-						<reference key="parent" ref="191373211"/>
+						<int key="objectID">29</int>
+						<reference key="object" ref="614255915"/>
+						<reference key="parent" ref="508086621"/>
 					</object>
 				</object>
 			</object>
@@ -402,6 +425,7 @@
 					<string>18.IBPluginDependency</string>
 					<string>23.IBPluginDependency</string>
 					<string>25.IBPluginDependency</string>
+					<string>29.IBPluginDependency</string>
 					<string>4.IBPluginDependency</string>
 					<string>5.IBPluginDependency</string>
 					<string>6.IBPluginDependency</string>
@@ -413,6 +437,7 @@
 					<string>HomeViewController</string>
 					<string>UIResponder</string>
 					<string>{{376, 276}, {320, 480}}</string>
+					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
@@ -441,7 +466,7 @@
 				</object>
 			</object>
 			<nil key="sourceID"/>
-			<int key="maxID">27</int>
+			<int key="maxID">31</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<object class="NSMutableArray" key="referencedPartialClassDescriptions">
@@ -453,6 +478,7 @@
 						<bool key="EncodedWithXMLCoder">YES</bool>
 						<object class="NSArray" key="dict.sortedKeys">
 							<bool key="EncodedWithXMLCoder">YES</bool>
+							<string>backPressed:</string>
 							<string>recordPressed:</string>
 							<string>settingsPressed:</string>
 							<string>undoPressed:</string>
@@ -462,12 +488,14 @@
 							<string>id</string>
 							<string>id</string>
 							<string>id</string>
+							<string>id</string>
 						</object>
 					</object>
 					<object class="NSMutableDictionary" key="outlets">
 						<bool key="EncodedWithXMLCoder">YES</bool>
 						<object class="NSArray" key="dict.sortedKeys">
 							<bool key="EncodedWithXMLCoder">YES</bool>
+							<string>backButton</string>
 							<string>commandsTable</string>
 							<string>listening</string>
 							<string>loading</string>
@@ -478,6 +506,7 @@
 						</object>
 						<object class="NSMutableArray" key="dict.values">
 							<bool key="EncodedWithXMLCoder">YES</bool>
+							<string>UIBarItem</string>
 							<string>UITableView</string>
 							<string>UILabel</string>
 							<string>UIActivityIndicatorView</string>
@@ -789,14 +818,12 @@
 				<string>preferences.png</string>
 				<string>rec.png</string>
 				<string>rec_on.png</string>
-				<string>refresh_48.png</string>
 			</object>
 			<object class="NSMutableArray" key="dict.values">
 				<bool key="EncodedWithXMLCoder">YES</bool>
 				<string>{26, 26}</string>
 				<string>{32, 32}</string>
 				<string>{32, 32}</string>
-				<string>{48, 48}</string>
 			</object>
 		</object>
 		<string key="IBCocoaTouchPluginVersion">87</string>

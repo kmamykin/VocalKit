@@ -53,6 +53,14 @@
 }
 
 - (IBAction)undoPressed:(id)sender {
+  if (![moreText isHidden]) {
+    if (audioPlayer.playing) {
+      [audioPlayer stop];
+    }
+    [self showCommands];
+    return;
+  }
+  
   [self removeCommand:@""];
   [commandsTable reloadData];
 }
@@ -61,14 +69,20 @@
   
 }
 
+- (IBAction)backPressed:(id)sender {
+  [self showCommands]; 
+}
+
 - (void)showCommands {
   [moreText setHidden:YES];
-  [commandsTable setHidden:NO];  
+  [commandsTable setHidden:NO];
+  [undoButton setBackgroundImage:[UIImage imageNamed:@"arrow_undo.png"] forState:UIControlStateNormal];
 }
 
 - (void)showMoreText {
   [moreText setHidden:NO];
   [commandsTable setHidden:YES];
+  [undoButton setBackgroundImage:[UIImage imageNamed:@"arrow_left.png"] forState:UIControlStateNormal];
 }
 
 - (void)addCommand:(NSString *)command {
@@ -98,11 +112,12 @@
     [self speakCommand:message];
   } if ([commandType isEqualToString:kCookCommandType]) {
     if (![message isEqualToString:@""]) {
+      message = [message stringByReplacingOccurrencesOfString:@"\\n" withString:@"\n"];
       moreText.text = message;
       [self showMoreText];
       [self speakCommand:message];
     } else {
-      [self showCommands]; 
+      [self showCommands];
     }
   }
 
@@ -113,8 +128,10 @@
 - (void)removeCommand:(NSString *)command {
   NSString *commandToRemove = command;
   if ([commandToRemove isEqualToString:@""]) {
-    commandToRemove = [commands lastObject];
-    [commands removeLastObject];
+    if ([commands count] > 0) {
+      commandToRemove = [commands lastObject];
+      [commands removeLastObject];
+    }
   } else {
     [commands removeObject:commandToRemove];
   }
@@ -146,6 +163,7 @@
   AudioSessionSetProperty (kAudioSessionProperty_OverrideAudioRoute,sizeof (audioRouteOverride),&audioRouteOverride);
   
   self.audioPlayer = [[[AVAudioPlayer alloc] initWithContentsOfURL:url error:&error] autorelease];
+  audioPlayer.delegate = self;
   audioPlayer.numberOfLoops = 0;
 	
 	[audioPlayer play];
@@ -181,22 +199,22 @@
 - (void) recognizedTextNotification:(NSNotification*)notification {
 	NSDictionary *dict = [notification userInfo];
   
-	NSString *command = [dict objectForKey:VKRecognizedPhraseNotificationTextKey];
-  
+	NSString *command = [[dict objectForKey:VKRecognizedPhraseNotificationTextKey] lowercaseString];
+
   if ([command isEqualToString:@""]) {
     return;
   }
 
   // HACK: hardcode zipcode
-  if ([command isEqualToString:@"WEATHER"]) {
+  if ([command isEqualToString:kWeatherCommandType]) {
     command = [command stringByAppendingString:@" 10002"];
-  } else {
-    [self speakCommand:command];    
+  } else if ([command isEqualToString:kBuyCommandType]) {
+    [self speakCommand:command];
   }
   
   NSLog(@"adding command %@", command);
 
-  [commands addObject:[command lowercaseString]];
+  [commands addObject:command];
   [self addCommand:command];
   
   [commandsTable reloadData];
@@ -332,5 +350,11 @@
   return YES; 
 }
 
+- (void)audioPlayerDidFinishPlaying:(AVAudioPlayer *)player successfully:(BOOL)flag {
+  NSLog(@"audioPlayerDidFinishPlaying %i", flag);
+  if (![moreText isHidden]) {
+    [self showCommands]; 
+  }
+}
 
 @end
