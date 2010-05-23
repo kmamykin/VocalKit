@@ -9,6 +9,7 @@
 #import "CommandCell.h"
 #import "HomeViewController.h"
 #import "ServerRequest.h"
+#import "SBJSON.h"
 
 @implementation HomeViewController
 
@@ -27,12 +28,24 @@
     return self;
 }
 
+- (BOOL)isSupportedCommandType:(NSString *)commandType {
+  if ([commandType isEqualToString:kWeatherCommandType] ||
+      [commandType isEqualToString:kCookCommandType] ||
+      [commandType isEqualToString:kBuyCommandType] ||
+      [commandType isEqualToString:kWatchCommandType]) {
+    return YES;
+  }
+  return NO;
+}
+
 - (IBAction)recordPressed:(id)sender {
 	if (![vk isListening]) {
     [recordButton setBackgroundImage:[UIImage imageNamed:@"rec_on.png"] forState:UIControlStateNormal];
+    [listening setHidden:NO];
 		[vk startListening];
 	} else {
     [recordButton setBackgroundImage:[UIImage imageNamed:@"rec.png"] forState:UIControlStateNormal];
+    [listening setHidden:YES];
 		[vk stopListening];
 		[vk showListened];
 		[vk postNotificationOfRecognizedText];
@@ -48,13 +61,23 @@
   
 }
 
+- (void)showCommands {
+  [moreText setHidden:YES];
+  [commandsTable setHidden:NO];  
+}
+
+- (void)showMoreText {
+  [moreText setHidden:NO];
+  [commandsTable setHidden:YES];
+}
+
 - (void)addCommand:(NSString *)command {
-  // Send "add" to server
   ServerRequest *request = [[ServerRequest alloc] init];
   [request add:command delegate:self
     requestSelector:@selector(addCommandCallback:)
     errorSelector:@selector(errorCallback:)];
   [request release];
+  
   [loading setHidden:NO];
   [loading startAnimating];
 }
@@ -62,9 +85,26 @@
 - (void)addCommandCallback:(NSData *)data {
   NSString *response = [[NSString alloc] initWithData:data encoding:NSASCIIStringEncoding];
   NSLog(@"addCommandCallback %@", response);
-  [self speakCommand:response];
-
+  
+  SBJSON *jsonParser = [SBJSON new];
+	id result = [jsonParser objectWithString:response error:NULL];
   [response release];
+
+  NSLog(@"json result %@", result);
+  NSString *commandType = [result valueForKey:@"command"];
+  NSString *message = [result valueForKey:@"message"];
+  if ([commandType isEqualToString:kWeatherCommandType]) {
+    [self showCommands];
+    [self speakCommand:message];
+  } if ([commandType isEqualToString:kCookCommandType]) {
+    if (![message isEqualToString:@""]) {
+      moreText.text = message;
+      [self showMoreText];
+      [self speakCommand:message];
+    } else {
+      [self showCommands]; 
+    }
+  }
 
   [loading stopAnimating];
   [loading setHidden:YES];
@@ -88,7 +128,7 @@
 }
 
 - (void)errorCallback:(NSString *)message {
-  
+  [self speakCommand:@"connection failure"];
 }
 
 - (void)speakCommand:(NSString *)command {
@@ -198,6 +238,8 @@
   [commandsTable reloadData];
   
   [loading setHidden:YES];
+  [listening setHidden:YES];
+  [self showCommands];
 }
 
 
@@ -261,19 +303,12 @@
   NSString *command = [commands objectAtIndex:indexPath.row];
   cell.label.text = [commands objectAtIndex:indexPath.row];
   NSArray *tokens = [command componentsSeparatedByString:@" "];
-  NSString *imageFile = [NSString stringWithFormat:@"%@.png", [tokens objectAtIndex:0]];
-  /*
-  if ([[command substringToIndex:4] isEqualToString:@"buy "]) {
-    imageFile = @"basket.png";
-  } else if ([[command substringToIndex:5] isEqualToString:@"cook"]) {
-    imageFile = @"cook.png";
-  } else if ([[command substringToIndex:6] isEqualToString:@"watch"]) {
-    imageFile = @"watch.png";
-  } else if ([[command substringToIndex:8] isEqualToString:@"weather"]) {
-    imageFile = @"weather.png";
+  NSString *imageFile;
+  if ([self isSupportedCommandType:[tokens objectAtIndex:0]]) {
+    imageFile = [NSString stringWithFormat:@"%@.png", [tokens objectAtIndex:0]];
+  } else {
+    imageFile = @"unknown.png";
   }
-  cell.icon.image = [UIImage imageNamed:imageFile];
-   */
   cell.icon.image = [UIImage imageNamed:imageFile];
   return cell;
 }

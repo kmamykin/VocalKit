@@ -20,6 +20,9 @@
 		8607FA04118B2DDA00FE23C0 /* libiconv.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 8607FA03118B2DDA00FE23C0 /* libiconv.dylib */; };
 		8607FA37118B31BF00FE23C0 /* libVocalKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 864883D5118A09EE002AB038 /* libVocalKit.a */; };
 		8D0B1B5E11A86E280005822D /* ServerRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D0B1B5D11A86E280005822D /* ServerRequest.m */; };
+		8D9FD6A611A91AE90077D396 /* unknown.png in Resources */ = {isa = PBXBuildFile; fileRef = 8D9FD6A511A91AE90077D396 /* unknown.png */; };
+		8D9FD70511A938A80077D396 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 8D9FD70411A938A80077D396 /* icon.png */; };
+		8D9FD71911A93B920077D396 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 8D9FD71811A93B920077D396 /* Default.png */; };
 		8DE52DB911A87F85007BD4A2 /* GroceryListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DE52DB711A87F85007BD4A2 /* GroceryListViewController.m */; };
 		8DE52DBA11A87F85007BD4A2 /* GroceryListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8DE52DB811A87F85007BD4A2 /* GroceryListViewController.xib */; };
 		8DE52E4011A89418007BD4A2 /* NSObject+SBJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DE52E3511A89418007BD4A2 /* NSObject+SBJSON.m */; };
@@ -82,6 +85,9 @@
 		8D0B1B5C11A86E280005822D /* ServerRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ServerRequest.h; sourceTree = "<group>"; };
 		8D0B1B5D11A86E280005822D /* ServerRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ServerRequest.m; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* VocalKitTest-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "VocalKitTest-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
+		8D9FD6A511A91AE90077D396 /* unknown.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = unknown.png; sourceTree = "<group>"; };
+		8D9FD70411A938A80077D396 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
+		8D9FD71811A93B920077D396 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		8DE52DB611A87F85007BD4A2 /* GroceryListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GroceryListViewController.h; sourceTree = "<group>"; };
 		8DE52DB711A87F85007BD4A2 /* GroceryListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GroceryListViewController.m; sourceTree = "<group>"; };
 		8DE52DB811A87F85007BD4A2 /* GroceryListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = GroceryListViewController.xib; path = Classes/GroceryListViewController.xib; sourceTree = "<group>"; };
@@ -204,7 +210,10 @@
 				8DE5302611A8ED08007BD4A2 /* cook.png */,
 				8DE5302811A8ED31007BD4A2 /* watch.png */,
 				8DE5307211A8F31C007BD4A2 /* weather.png */,
+				8D9FD6A511A91AE90077D396 /* unknown.png */,
 				8DE5302A11A8EDB6007BD4A2 /* shape_square_add.png */,
+				8D9FD70411A938A80077D396 /* icon.png */,
+				8D9FD71811A93B920077D396 /* Default.png */,
 				8D1107310486CEB800E47090 /* VocalKitTest-Info.plist */,
 			);
 			name = Resources;
@@ -325,6 +334,9 @@
 				8DE5304E11A8EF7D007BD4A2 /* CommandCell.xib in Resources */,
 				8DE5307311A8F31C007BD4A2 /* weather.png in Resources */,
 				8DE531F811A90F18007BD4A2 /* model in Resources */,
+				8D9FD6A611A91AE90077D396 /* unknown.png in Resources */,
+				8D9FD70511A938A80077D396 /* icon.png in Resources */,
+				8D9FD71911A93B920077D396 /* Default.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

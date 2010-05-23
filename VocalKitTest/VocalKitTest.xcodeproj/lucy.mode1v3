@@ -197,48 +197,7 @@
 	<key>Notifications</key>
 	<array/>
 	<key>OpenEditors</key>
-	<array>
-		<dict>
-			<key>Content</key>
-			<dict>
-				<key>PBXProjectModuleGUID</key>
-				<string>8DE5321911A910A4007BD4A2</string>
-				<key>PBXProjectModuleLabel</key>
-				<string>VocalKitTestViewController.m</string>
-				<key>PBXSplitModuleInNavigatorKey</key>
-				<dict>
-					<key>Split0</key>
-					<dict>
-						<key>PBXProjectModuleGUID</key>
-						<string>8DE5321A11A910A4007BD4A2</string>
-						<key>PBXProjectModuleLabel</key>
-						<string>VocalKitTestViewController.m</string>
-						<key>_historyCapacity</key>
-						<integer>0</integer>
-						<key>bookmark</key>
-						<string>8D9FD69F11A918040077D396</string>
-						<key>history</key>
-						<array>
-							<string>8DE5321B11A910A4007BD4A2</string>
-						</array>
-					</dict>
-					<key>SplitCount</key>
-					<string>1</string>
-				</dict>
-				<key>StatusBarVisibility</key>
-				<true/>
-			</dict>
-			<key>Geometry</key>
-			<dict>
-				<key>Frame</key>
-				<string>{{0, 20}, {1192, 655}}</string>
-				<key>PBXModuleWindowStatusBarHidden2</key>
-				<false/>
-				<key>RubberWindowFrame</key>
-				<string>15 77 1192 696 0 0 1280 778 </string>
-			</dict>
-		</dict>
-	</array>
+	<array/>
 	<key>PerspectiveWidths</key>
 	<array>
 		<integer>-1</integer>
@@ -269,6 +228,8 @@
 			<key>Layout</key>
 			<array>
 				<dict>
+					<key>BecomeActive</key>
+					<true/>
 					<key>ContentConfiguration</key>
 					<dict>
 						<key>PBXBottomSmartGroupGIDs</key>
@@ -311,19 +272,18 @@
 								<string>19C28FACFE9D520D11CA2CBB</string>
 								<string>1C37FBAC04509CD000000102</string>
 								<string>8D9FD60F11A910C20077D396</string>
-								<string>8D9FD65F11A914CE0077D396</string>
 								<string>1C37FABC05509CD000000102</string>
 							</array>
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>6</integer>
-									<integer>2</integer>
+									<integer>26</integer>
+									<integer>22</integer>
 									<integer>0</integer>
 								</array>
 							</array>
 							<key>PBXSmartGroupTreeModuleOutlineStateVisibleRectKey</key>
-							<string>{{0, 15}, {277, 660}}</string>
+							<string>{{0, 0}, {277, 555}}</string>
 						</dict>
 						<key>PBXTopSmartGroupGIDs</key>
 						<array/>
@@ -335,14 +295,14 @@
 					<key>GeometryConfiguration</key>
 					<dict>
 						<key>Frame</key>
-						<string>{{0, 0}, {294, 678}}</string>
+						<string>{{0, 0}, {294, 573}}</string>
 						<key>GroupTreeTableConfiguration</key>
 						<array>
 							<string>MainColumn</string>
 							<real>277</real>
 						</array>
 						<key>RubberWindowFrame</key>
-						<string>0 59 1280 719 0 0 1280 778 </string>
+						<string>29 160 1088 614 0 0 1280 778 </string>
 					</dict>
 					<key>Module</key>
 					<string>PBXSmartGroupTreeModule</string>
@@ -353,14 +313,12 @@
 					<key>Dock</key>
 					<array>
 						<dict>
-							<key>BecomeActive</key>
-							<true/>
 							<key>ContentConfiguration</key>
 							<dict>
 								<key>PBXProjectModuleGUID</key>
 								<string>1CE0B20306471E060097A5F4</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>VocalKitTestAppDelegate.m</string>
+								<string>SettingsViewController.m</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -368,41 +326,45 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>1CE0B20406471E060097A5F4</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>VocalKitTestAppDelegate.m</string>
+										<string>SettingsViewController.m</string>
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>8D9FD69E11A918040077D396</string>
+										<string>8D9FD72F11A93D390077D396</string>
 										<key>history</key>
 										<array>
 											<string>8D0B1B1A11A859DC0005822D</string>
 											<string>8DE52EF011A8B78C007BD4A2</string>
-											<string>8DE52F3111A8BE1E007BD4A2</string>
-											<string>8DE52F5911A8C394007BD4A2</string>
 											<string>8DE52F7111A8C75B007BD4A2</string>
 											<string>8DE52F9511A8D36A007BD4A2</string>
 											<string>8DE5303911A8EE78007BD4A2</string>
-											<string>8DE5303C11A8EEB2007BD4A2</string>
 											<string>8DE5306A11A8F200007BD4A2</string>
 											<string>8DE5306B11A8F200007BD4A2</string>
 											<string>8DE5307611A8F363007BD4A2</string>
 											<string>8DE5307711A8F363007BD4A2</string>
-											<string>8DE5307811A8F363007BD4A2</string>
 											<string>8DE5308A11A8F6F3007BD4A2</string>
-											<string>8DE5308B11A8F6F3007BD4A2</string>
 											<string>8D9FD66011A914CE0077D396</string>
 											<string>8D9FD66211A914CE0077D396</string>
 											<string>8D9FD66411A914CE0077D396</string>
 											<string>8D9FD66611A914CE0077D396</string>
 											<string>8D9FD66811A914CE0077D396</string>
-											<string>8D9FD66A11A914CE0077D396</string>
-											<string>8D9FD66B11A914CE0077D396</string>
-											<string>8D9FD66D11A914CE0077D396</string>
-											<string>8D9FD67E11A9153C0077D396</string>
 											<string>8D9FD69411A917AA0077D396</string>
-											<string>8D9FD69511A917AA0077D396</string>
-											<string>8D9FD69611A917AA0077D396</string>
-											<string>8D9FD69711A917AA0077D396</string>
+											<string>8D9FD6B811A91CCB0077D396</string>
+											<string>8D9FD6B911A91CCB0077D396</string>
+											<string>8D9FD6BA11A91CCB0077D396</string>
+											<string>8D9FD6BD11A91CCB0077D396</string>
+											<string>8D9FD6C011A91CCB0077D396</string>
+											<string>8D9FD6C811A91D080077D396</string>
+											<string>8D9FD70011A92A8D0077D396</string>
+											<string>8D9FD70911A938BF0077D396</string>
+											<string>8D9FD71E11A93BE80077D396</string>
+											<string>8D9FD71F11A93BE80077D396</string>
+											<string>8D9FD72011A93BE80077D396</string>
+											<string>8D9FD72111A93BE80077D396</string>
+											<string>8D9FD72B11A93D390077D396</string>
+											<string>8D9FD72C11A93D390077D396</string>
+											<string>8D9FD72D11A93D390077D396</string>
+											<string>8D9FD72E11A93D390077D396</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -414,14 +376,14 @@
 							<key>GeometryConfiguration</key>
 							<dict>
 								<key>Frame</key>
-								<string>{{0, 0}, {981, 465}}</string>
+								<string>{{0, 0}, {789, 360}}</string>
 								<key>RubberWindowFrame</key>
-								<string>0 59 1280 719 0 0 1280 778 </string>
+								<string>29 160 1088 614 0 0 1280 778 </string>
 							</dict>
 							<key>Module</key>
 							<string>PBXNavigatorGroup</string>
 							<key>Proportion</key>
-							<string>465pt</string>
+							<string>360pt</string>
 						</dict>
 						<dict>
 							<key>ContentConfiguration</key>
@@ -434,9 +396,9 @@
 							<key>GeometryConfiguration</key>
 							<dict>
 								<key>Frame</key>
-								<string>{{0, 470}, {981, 208}}</string>
+								<string>{{0, 365}, {789, 208}}</string>
 								<key>RubberWindowFrame</key>
-								<string>0 59 1280 719 0 0 1280 778 </string>
+								<string>29 160 1088 614 0 0 1280 778 </string>
 							</dict>
 							<key>Module</key>
 							<string>XCDetailModule</string>
@@ -445,7 +407,7 @@
 						</dict>
 					</array>
 					<key>Proportion</key>
-					<string>981pt</string>
+					<string>789pt</string>
 				</dict>
 			</array>
 			<key>Name</key>
@@ -604,12 +566,11 @@
 		<string>8D9FD67B11A914CE0077D396</string>
 		<string>1CD10A99069EF8BA00B06720</string>
 		<string>8DE7B34511A84D570026A68F</string>
-		<string>8DE5321911A910A4007BD4A2</string>
 		<string>1C78EAAD065D492600B07095</string>
 		<string>/Users/lucy/Lucid/src/VocalKit/VocalKitTest/VocalKitTest.xcodeproj</string>
 	</array>
 	<key>WindowString</key>
-	<string>0 59 1280 719 0 0 1280 778 </string>
+	<string>29 160 1088 614 0 0 1280 778 </string>
 	<key>WindowToolsV3</key>
 	<array>
 		<dict>
@@ -625,14 +586,12 @@
 					<key>Dock</key>
 					<array>
 						<dict>
-							<key>BecomeActive</key>
-							<true/>
 							<key>ContentConfiguration</key>
 							<dict>
 								<key>PBXProjectModuleGUID</key>
 								<string>1CD0528F0623707200166675</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>VocalKitTestAppDelegate.m</string>
+								<string>ServerRequest.m</string>
 								<key>StatusBarVisibility</key>
 								<true/>
 							</dict>
@@ -649,6 +608,8 @@
 							<string>173pt</string>
 						</dict>
 						<dict>
+							<key>BecomeActive</key>
+							<true/>
 							<key>ContentConfiguration</key>
 							<dict>
 								<key>PBXProjectModuleGUID</key>

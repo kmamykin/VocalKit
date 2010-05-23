@@ -11,11 +11,18 @@
 #import "VKFliteSpeaker.h"
 #import <AVFoundation/AVFoundation.h>
 
+#define kWeatherCommandType   @"weather"
+#define kCookCommandType      @"cook"
+#define kBuyCommandType       @"buy"
+#define kWatchCommandType     @"watch"
+
 @interface HomeViewController : UIViewController<UITableViewDelegate, UITableViewDataSource> {
   IBOutlet UITableView *commandsTable;
   IBOutlet UIButton *recordButton;
   IBOutlet UIButton *undoButton;
   IBOutlet UIBarItem *settingsButton;
+  IBOutlet UITextView *moreText;
+  IBOutlet UILabel *listening;
   IBOutlet UIActivityIndicatorView *loading;
   
   NSMutableArray *commands;
@@ -40,5 +47,9 @@
 - (void)errorCallback:(NSString *)message;
 
 - (void)speakCommand:(NSString *)command;
+
+- (BOOL)isSupportedCommandType:(NSString *)commandType;
+- (void)showCommands;
+- (void)showMoreText;
 
 @end
