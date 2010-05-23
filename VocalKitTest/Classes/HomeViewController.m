@@ -18,7 +18,6 @@
     if ((self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil])) {
       NSMutableArray *storedCommands = 
         [[NSUserDefaults standardUserDefaults] objectForKey:@"commands"];
-      NSLog(@"storedCommands %i", [storedCommands count]);
       if (storedCommands != nil) {
         commands = [[NSMutableArray alloc] initWithArray:storedCommands];
       } else {

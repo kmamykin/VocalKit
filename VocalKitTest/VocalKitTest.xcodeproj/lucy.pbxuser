@@ -2,16 +2,16 @@
 {
 	1D3623240D0F684500981E51 /* VocalKitTestAppDelegate.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {920, 400}}";
-			sepNavSelRange = "{572, 0}";
-			sepNavVisRange = "{0, 628}";
+			sepNavIntBoundsRect = "{{0, 0}, {920, 385}}";
+			sepNavSelRange = "{500, 0}";
+			sepNavVisRange = "{0, 507}";
 		};
 	};
 	1D3623250D0F684500981E51 /* VocalKitTestAppDelegate.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {924, 592}}";
-			sepNavSelRange = "{696, 0}";
-			sepNavVisRange = "{0, 752}";
+			sepNavIntBoundsRect = "{{0, 0}, {924, 528}}";
+			sepNavSelRange = "{221, 0}";
+			sepNavVisRange = "{53, 703}";
 			sepNavWindowFrame = "{{15, 21}, {1192, 752}}";
 		};
 	};
@@ -122,6 +122,16 @@
 			8D9FD68A11A916CB0077D396 /* PBXTextBookmark */ = 8D9FD68A11A916CB0077D396 /* PBXTextBookmark */;
 			8D9FD68B11A916CB0077D396 /* PBXTextBookmark */ = 8D9FD68B11A916CB0077D396 /* PBXTextBookmark */;
 			8D9FD68C11A916CB0077D396 /* PBXTextBookmark */ = 8D9FD68C11A916CB0077D396 /* PBXTextBookmark */;
+			8D9FD69211A917AA0077D396 /* XCBuildMessageTextBookmark */ = 8D9FD69211A917AA0077D396 /* XCBuildMessageTextBookmark */;
+			8D9FD69311A917AA0077D396 /* PBXTextBookmark */ = 8D9FD69311A917AA0077D396 /* PBXTextBookmark */;
+			8D9FD69411A917AA0077D396 /* PBXTextBookmark */ = 8D9FD69411A917AA0077D396 /* PBXTextBookmark */;
+			8D9FD69511A917AA0077D396 /* PBXTextBookmark */ = 8D9FD69511A917AA0077D396 /* PBXTextBookmark */;
+			8D9FD69611A917AA0077D396 /* PBXTextBookmark */ = 8D9FD69611A917AA0077D396 /* PBXTextBookmark */;
+			8D9FD69711A917AA0077D396 /* XCBuildMessageTextBookmark */ = 8D9FD69711A917AA0077D396 /* XCBuildMessageTextBookmark */;
+			8D9FD69811A917AA0077D396 /* PBXTextBookmark */ = 8D9FD69811A917AA0077D396 /* PBXTextBookmark */;
+			8D9FD69911A917AA0077D396 /* PBXTextBookmark */ = 8D9FD69911A917AA0077D396 /* PBXTextBookmark */;
+			8D9FD69E11A918040077D396 /* PBXTextBookmark */ = 8D9FD69E11A918040077D396 /* PBXTextBookmark */;
+			8D9FD69F11A918040077D396 /* PBXTextBookmark */ = 8D9FD69F11A918040077D396 /* PBXTextBookmark */;
 			8DE52EF011A8B78C007BD4A2 = 8DE52EF011A8B78C007BD4A2 /* PBXTextBookmark */;
 			8DE52F3111A8BE1E007BD4A2 = 8DE52F3111A8BE1E007BD4A2 /* PlistBookmark */;
 			8DE52F5911A8C394007BD4A2 = 8DE52F5911A8C394007BD4A2 /* PBXTextBookmark */;
@@ -295,7 +305,7 @@
 		fRef = 8DE52EEB11A8B77B007BD4A2 /* HomeViewController.m */;
 		name = "HomeViewController.m: 60";
 		rLen = 18;
-		rLoc = 1567;
+		rLoc = 1508;
 		rType = 0;
 		vrLen = 677;
 		vrLoc = 1520;
@@ -345,7 +355,7 @@
 		fRef = 8DE52EEB11A8B77B007BD4A2 /* HomeViewController.m */;
 		name = "HomeViewController.m: 60";
 		rLen = 18;
-		rLoc = 1567;
+		rLoc = 1508;
 		rType = 0;
 		vrLen = 677;
 		vrLoc = 1520;
@@ -355,7 +365,7 @@
 		fRef = 8DE52EEB11A8B77B007BD4A2 /* HomeViewController.m */;
 		name = "HomeViewController.m: 163";
 		rLen = 0;
-		rLoc = 4770;
+		rLoc = 4711;
 		rType = 0;
 		vrLen = 659;
 		vrLoc = 4441;
@@ -385,7 +395,7 @@
 		fRef = 8DE52EEB11A8B77B007BD4A2 /* HomeViewController.m */;
 		name = "HomeViewController.m: 67";
 		rLen = 0;
-		rLoc = 1755;
+		rLoc = 1696;
 		rType = 0;
 		vrLen = 797;
 		vrLoc = 1609;
@@ -395,7 +405,7 @@
 		fRef = 8DE52EEB11A8B77B007BD4A2 /* HomeViewController.m */;
 		name = "HomeViewController.m: 47";
 		rLen = 0;
-		rLoc = 1328;
+		rLoc = 1269;
 		rType = 0;
 		vrLen = 669;
 		vrLoc = 1040;
@@ -415,7 +425,7 @@
 		fRef = 8DE52EEB11A8B77B007BD4A2 /* HomeViewController.m */;
 		name = "HomeViewController.m: 47";
 		rLen = 0;
-		rLoc = 1328;
+		rLoc = 1269;
 		rType = 0;
 		vrLen = 669;
 		vrLoc = 1040;
@@ -435,7 +445,7 @@
 		fRef = 1D3623240D0F684500981E51 /* VocalKitTestAppDelegate.h */;
 		name = "VocalKitTestAppDelegate.h: 21";
 		rLen = 0;
-		rLoc = 572;
+		rLoc = 500;
 		rType = 0;
 		vrLen = 628;
 		vrLoc = 0;
@@ -445,12 +455,110 @@
 		fRef = 1D3623240D0F684500981E51 /* VocalKitTestAppDelegate.h */;
 		name = "VocalKitTestAppDelegate.h: 21";
 		rLen = 0;
-		rLoc = 572;
+		rLoc = 500;
 		rType = 0;
 		vrLen = 628;
 		vrLoc = 0;
 	};
 	8D9FD68C11A916CB0077D396 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 28D7ACF70DDB3853001CB0EB /* VocalKitTestViewController.m */;
+		name = "VocalKitTestViewController.m: 154";
+		rLen = 0;
+		rLoc = 4829;
+		rType = 0;
+		vrLen = 1255;
+		vrLoc = 3678;
+	};
+	8D9FD69211A917AA0077D396 /* XCBuildMessageTextBookmark */ = {
+		isa = PBXTextBookmark;
+		comments = "No declaration of property 'navController' found in the interface";
+		fRef = 1D3623250D0F684500981E51 /* VocalKitTestAppDelegate.m */;
+		fallbackIsa = XCBuildMessageTextBookmark;
+		rLen = 1;
+		rLoc = 15;
+		rType = 1;
+	};
+	8D9FD69311A917AA0077D396 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1D3623250D0F684500981E51 /* VocalKitTestAppDelegate.m */;
+		name = "VocalKitTestAppDelegate.m: 17";
+		rLen = 0;
+		rLoc = 311;
+		rType = 0;
+		vrLen = 374;
+		vrLoc = 261;
+	};
+	8D9FD69411A917AA0077D396 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1D3623240D0F684500981E51 /* VocalKitTestAppDelegate.h */;
+		name = "VocalKitTestAppDelegate.h: 20";
+		rLen = 0;
+		rLoc = 500;
+		rType = 0;
+		vrLen = 507;
+		vrLoc = 0;
+	};
+	8D9FD69511A917AA0077D396 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 8DE52EEA11A8B77B007BD4A2 /* HomeViewController.h */;
+		name = "HomeViewController.h: 33";
+		rLen = 0;
+		rLoc = 788;
+		rType = 0;
+		vrLen = 548;
+		vrLoc = 546;
+	};
+	8D9FD69611A917AA0077D396 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 8DE52EEB11A8B77B007BD4A2 /* HomeViewController.m */;
+		name = "HomeViewController.m: 21";
+		rLen = 0;
+		rLoc = 563;
+		rType = 0;
+		vrLen = 782;
+		vrLoc = 1384;
+	};
+	8D9FD69711A917AA0077D396 /* XCBuildMessageTextBookmark */ = {
+		isa = PBXTextBookmark;
+		comments = "No declaration of property 'navController' found in the interface";
+		fRef = 1D3623250D0F684500981E51 /* VocalKitTestAppDelegate.m */;
+		fallbackIsa = XCBuildMessageTextBookmark;
+		rLen = 1;
+		rLoc = 15;
+		rType = 1;
+	};
+	8D9FD69811A917AA0077D396 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1D3623250D0F684500981E51 /* VocalKitTestAppDelegate.m */;
+		name = "VocalKitTestAppDelegate.m: 17";
+		rLen = 0;
+		rLoc = 311;
+		rType = 0;
+		vrLen = 693;
+		vrLoc = 50;
+	};
+	8D9FD69911A917AA0077D396 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 28D7ACF70DDB3853001CB0EB /* VocalKitTestViewController.m */;
+		name = "VocalKitTestViewController.m: 154";
+		rLen = 0;
+		rLoc = 4829;
+		rType = 0;
+		vrLen = 1255;
+		vrLoc = 3678;
+	};
+	8D9FD69E11A918040077D396 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1D3623250D0F684500981E51 /* VocalKitTestAppDelegate.m */;
+		name = "VocalKitTestAppDelegate.m: 11";
+		rLen = 0;
+		rLoc = 221;
+		rType = 0;
+		vrLen = 703;
+		vrLoc = 53;
+	};
+	8D9FD69F11A918040077D396 /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
 		fRef = 28D7ACF70DDB3853001CB0EB /* VocalKitTestViewController.m */;
 		name = "VocalKitTestViewController.m: 154";
@@ -484,9 +592,9 @@
 	};
 	8DE52EEB11A8B77B007BD4A2 /* HomeViewController.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {920, 4944}}";
-			sepNavSelRange = "{1328, 0}";
-			sepNavVisRange = "{1040, 669}";
+			sepNavIntBoundsRect = "{{0, 0}, {920, 5088}}";
+			sepNavSelRange = "{563, 0}";
+			sepNavVisRange = "{1384, 782}";
 			sepNavWindowFrame = "{{15, 21}, {1192, 752}}";
 		};
 	};
@@ -549,7 +657,7 @@
 		fRef = 1D3623240D0F684500981E51 /* VocalKitTestAppDelegate.h */;
 		name = "VocalKitTestAppDelegate.h: 21";
 		rLen = 0;
-		rLoc = 572;
+		rLoc = 500;
 		rType = 0;
 		vrLen = 628;
 		vrLoc = 0;
@@ -663,7 +771,7 @@
 		fRef = 8DE52EEB11A8B77B007BD4A2 /* HomeViewController.m */;
 		name = "HomeViewController.m: 63";
 		rLen = 0;
-		rLoc = 1678;
+		rLoc = 1619;
 		rType = 0;
 		vrLen = 835;
 		vrLoc = 2247;
@@ -695,7 +803,7 @@
 		fRef = 1D3623250D0F684500981E51 /* VocalKitTestAppDelegate.m */;
 		name = "VocalKitTestAppDelegate.m: 23";
 		rLen = 0;
-		rLoc = 696;
+		rLoc = 630;
 		rType = 0;
 		vrLen = 752;
 		vrLoc = 0;

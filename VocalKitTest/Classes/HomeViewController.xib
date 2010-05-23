@@ -147,26 +147,7 @@
 						</object>
 						<reference key="IBUINormalBackgroundImage" ref="388390544"/>
 					</object>
-					<object class="IBUIButton" id="1063960299">
-						<reference key="NSNextResponder" ref="191373211"/>
-						<int key="NSvFlags">292</int>
-						<string key="NSFrame">{{116, 431}, {72, 37}}</string>
-						<reference key="NSSuperview" ref="191373211"/>
-						<bool key="IBUIOpaque">NO</bool>
-						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
-						<int key="IBUIContentHorizontalAlignment">0</int>
-						<int key="IBUIContentVerticalAlignment">0</int>
-						<reference key="IBUIFont" ref="872793665"/>
-						<int key="IBUIButtonType">1</int>
-						<string key="IBUINormalTitle">speak</string>
-						<reference key="IBUIHighlightedTitleColor" ref="921470361"/>
-						<object class="NSColor" key="IBUINormalTitleColor">
-							<int key="NSColorSpace">1</int>
-							<bytes key="NSRGB">MC4xOTYwNzg0MzQ2IDAuMzA5ODAzOTMyOSAwLjUyMTU2ODY1NgA</bytes>
-						</object>
-						<reference key="IBUINormalTitleShadowColor" ref="1044729599"/>
-					</object>
-					<object class="IBUIActivityIndicatorView" id="864052220">
+					<object class="IBUIActivityIndicatorView" id="440490997">
 						<reference key="NSNextResponder" ref="191373211"/>
 						<int key="NSvFlags">292</int>
 						<string key="NSFrame">{{288, 439}, {20, 20}}</string>
@@ -238,23 +219,6 @@
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchOutletConnection" key="connection">
-						<string key="label">speakButton</string>
-						<reference key="source" ref="372490531"/>
-						<reference key="destination" ref="1063960299"/>
-					</object>
-					<int key="connectionID">15</int>
-				</object>
-				<object class="IBConnectionRecord">
-					<object class="IBCocoaTouchEventConnection" key="connection">
-						<string key="label">speakPressed:</string>
-						<reference key="source" ref="1063960299"/>
-						<reference key="destination" ref="372490531"/>
-						<int key="IBEventType">7</int>
-					</object>
-					<int key="connectionID">16</int>
-				</object>
-				<object class="IBConnectionRecord">
-					<object class="IBCocoaTouchOutletConnection" key="connection">
 						<string key="label">settingsButton</string>
 						<reference key="source" ref="372490531"/>
 						<reference key="destination" ref="42548722"/>
@@ -265,7 +229,7 @@
 					<object class="IBCocoaTouchOutletConnection" key="connection">
 						<string key="label">loading</string>
 						<reference key="source" ref="372490531"/>
-						<reference key="destination" ref="864052220"/>
+						<reference key="destination" ref="440490997"/>
 					</object>
 					<int key="connectionID">20</int>
 				</object>
@@ -296,8 +260,7 @@
 							<reference ref="812640656"/>
 							<reference ref="815955232"/>
 							<reference ref="252875558"/>
-							<reference ref="1063960299"/>
-							<reference ref="864052220"/>
+							<reference ref="440490997"/>
 						</object>
 						<reference key="parent" ref="0"/>
 					</object>
@@ -346,18 +309,13 @@
 						<reference key="parent" ref="191373211"/>
 					</object>
 					<object class="IBObjectRecord">
-						<int key="objectID">14</int>
-						<reference key="object" ref="1063960299"/>
-						<reference key="parent" ref="191373211"/>
-					</object>
-					<object class="IBObjectRecord">
 						<int key="objectID">17</int>
 						<reference key="object" ref="42548722"/>
 						<reference key="parent" ref="508086621"/>
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">18</int>
-						<reference key="object" ref="864052220"/>
+						<reference key="object" ref="440490997"/>
 						<reference key="parent" ref="191373211"/>
 					</object>
 				</object>
@@ -370,7 +328,6 @@
 					<string>-2.CustomClassName</string>
 					<string>1.IBEditorWindowLastContentRect</string>
 					<string>1.IBPluginDependency</string>
-					<string>14.IBPluginDependency</string>
 					<string>17.IBPluginDependency</string>
 					<string>18.IBPluginDependency</string>
 					<string>4.IBPluginDependency</string>
@@ -384,7 +341,6 @@
 					<string>HomeViewController</string>
 					<string>UIResponder</string>
 					<string>{{376, 276}, {320, 480}}</string>
-					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
@@ -425,12 +381,10 @@
 							<bool key="EncodedWithXMLCoder">YES</bool>
 							<string>recordPressed:</string>
 							<string>settingsPressed:</string>
-							<string>speakPressed:</string>
 							<string>undoPressed:</string>
 						</object>
 						<object class="NSMutableArray" key="dict.values">
 							<bool key="EncodedWithXMLCoder">YES</bool>
-							<string>id</string>
 							<string>id</string>
 							<string>id</string>
 							<string>id</string>
@@ -444,7 +398,6 @@
 							<string>loading</string>
 							<string>recordButton</string>
 							<string>settingsButton</string>
-							<string>speakButton</string>
 							<string>undoButton</string>
 						</object>
 						<object class="NSMutableArray" key="dict.values">
@@ -453,7 +406,6 @@
 							<string>UIActivityIndicatorView</string>
 							<string>UIButton</string>
 							<string>UIBarItem</string>
-							<string>UIButton</string>
 							<string>UIButton</string>
 						</object>
 					</object>

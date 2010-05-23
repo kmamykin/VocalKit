@@ -8,13 +8,11 @@
 
 #import "HomeViewController.h"
 #import "VocalKitTestAppDelegate.h"
-#import "VocalKitTestViewController.h"
 
 @implementation VocalKitTestAppDelegate
 
 @synthesize window;
 @synthesize viewController;
-@synthesize navController;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {    
   // Override point for customization after app launch
